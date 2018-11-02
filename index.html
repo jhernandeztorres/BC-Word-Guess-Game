@@ -10,32 +10,48 @@
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Custom Font-->
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
     <title>Word Guess Game</title>
 </head>
-<body>
-<div class="container">
-    <div class="row">
-        <h2>Word To Guess</h2>
-    </div>
-    <div class="row">
-        <!-- word will show up here -->
-    </div>
-    <div class="row">
-        <h2>Guesses Left</h2>
-    </div>
-    <div class="row">
-        <!-- Counter goes here -->
-        <div class="guessesLeft"></div>
-    </div>
-    <div class="row">
-        <h2>Letters Pressed</h2>
-    </div>
-    <div class="row">
-        <!-- Box that shows letters pressed -->
-        <div class="letterBox"></div>
-    </div>
-</div>
 
+<body>
+    <div class="jumbotron-fluid" id="jumbo">
+        <img class="banner-img" src="assets/images/Big-Hero-6-banner.jpeg" alt="" srcset="">
+        <p id="instructions">Press Any Key to Get Started!</p>
+    </div>
+
+    <div class="container">
+        <div class="row" id="gamebox">
+            <div class="col-md-2"></div>
+            <div class="col-md-4 text-center" id="imgbox"><img class="img-fluid img-thumbnail" id="img" src="assets/images/emily-morter-188019-unsplash.jpg"
+                    alt="who is it">
+                <p id="who">Who is it?</p>
+                <hr>
+            </div>
+            <div class="col-md-4" id="game">
+                <p>Wins</p>
+                <p id="wins">
+                    <br>
+                </p>
+                <p>Current Word</p>
+                <p id="currentWord"></p>
+                <p>Number of Guesses Remaining</p>
+                <p id="guess">
+                    <br>
+                </p>
+                <p>Letters already guessed</p>
+                <p id="currentGuess"></p>
+                <p>Letters pressed more than once</p>
+                <p id="alreadyGuessed"></p>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <!-- Javascript -->
+    <script src="assets/js/game.js"></script>
     <!-- Bootsrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
