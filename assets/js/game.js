@@ -99,7 +99,7 @@ function outcome(result) {
 
     // reset the blanks
     currentGuess = [];
-    guessesLeft = 6;
+    guessesLeft = 11;
     pick = [];
     currentWord = [];
 
