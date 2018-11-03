@@ -6,7 +6,7 @@ var computerChoice = [
 
 var wins = 0;
 var currentGuess = [];
-var guessesLeft = 6;
+var guessesLeft = 11;
 var pick = []; // variable to hold the picked word
 var currentWord = []; // array to hold letters for selected word
 var allowedCharacters = [
@@ -52,6 +52,16 @@ function updateHTML() {
 
 }
 
+// function to reset image after 2 seconds
+function imgReset(){
+    setTimeout(function(){
+        var setImg = document.getElementById("who");
+        img.setAttribute("src", "assets/images/emily-morter-188019-unsplash.jpg");
+        var name = document.getElementById("who");
+        name.textContent = "Who is it?";
+    }, 3000);
+}
+
 function win() {
     var img = document.getElementById("img");
     // replace the image with the src image connected by name
@@ -59,6 +69,7 @@ function win() {
     // replace the name text with the character name
     var name = document.getElementById("who");
     name.textContent = who;
+    imgReset();
 }
 
 function lose() {
@@ -67,7 +78,8 @@ function lose() {
     img.setAttribute("src", "assets/images/Fail.png");
     // replace the name text with the character name
     var name = document.getElementById("who");
-    name.textContent = "Try Again!";
+    name.textContent = "Correct answer was: " + computerPick + " Try Again!";
+    imgReset();
 }
 
 // win or lose outcomes
